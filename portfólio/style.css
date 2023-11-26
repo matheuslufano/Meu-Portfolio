@@ -1,0 +1,160 @@
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #000;
+    height: 100vh;
+}
+
+.flex{
+    display: flex;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto ;
+}
+
+.btn-contatos button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00ff08;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer; /* cursor converte para ponteiro na teg button*/
+    transition: .2s;
+}
+
+
+h2.titulo{
+    color: #ffffff;
+    font-size: 38px;
+    text-align: center;
+    font-weight: bold; /*⭐*/
+}
+
+h2.titulo span{
+    color: #00ff08;
+}
+
+/* ESTILO DO CABEÇALHO */
+header{
+    padding: 40px 4%; /* espaço do conteudo do header*/
+} 
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #5c5c5c;
+    text-decoration: none;
+    display: inline-block; /*tag a é convertida para linha bloco*/
+    transition: .2s;
+}
+
+header a:hover{
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+    
+}
+
+header nav ul li{
+    display: inline;
+    padding: 0 40px;
+}
+
+.btn-contatos button:hover{
+    box-shadow: 0px 0px 8px #00ff08;/*⭐Serve p fazer sombra ou brilho*/
+    transform: scale(1.05);
+}
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site .txt-top-site h1 {
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 40px;
+    font-weight: 700; /*⭐*/
+}
+
+.topo-do-site .txt-top-site h1 span{
+    color: #00ff08;
+}
+
+.topo-do-site .txt-top-site p{
+    color: #ffffff;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-top-site img{
+    box-shadow: 0px 0px 30px #00ff08;
+    border-radius: 15%;
+    position: relative;
+    animation: flutuar 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+
+/* ESTILO DAS ESPERCIALIDADES. */
+section.espercialidades{
+    padding: 40px 4%;
+}
+
+section.espercialidades .flex{
+    gap: 60px;
+}
+
+.espercialidades .especialidades-box{
+    color: #ffffff;
+    padding: 40px;
+    margin-top: 25px;
+    border: 2px solid #ffffff09;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.espercialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff75;
+}
+
+.espercialidades .especialidades-box i{
+    font-size: 70px;
+    color: #00ff08;
+    
+}
+
+.espercialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
