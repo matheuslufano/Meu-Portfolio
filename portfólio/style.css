@@ -31,6 +31,10 @@ body{
     transition: .2s;
 }
 
+button:hover{
+    box-shadow: 0px 0px 8px #00ff08;/*⭐Serve p fazer sombra ou brilho*/
+    transform: scale(1.05);
+}
 
 h2.titulo{
     color: #ffffff;
@@ -76,10 +80,6 @@ header nav ul li{
     padding: 0 40px;
 }
 
-.btn-contatos button:hover{
-    box-shadow: 0px 0px 8px #00ff08;/*⭐Serve p fazer sombra ou brilho*/
-    transform: scale(1.05);
-}
 
 /* ESTILO DO TOPO DO SITE */
 section.topo-do-site{
@@ -127,7 +127,8 @@ section.topo-do-site .flex{
 
 /* ESTILO DAS ESPERCIALIDADES. */
 section.espercialidades{
-    padding: 40px 4%;
+    padding: 80px 4%;
+    margin-top: 150px;
 }
 
 section.espercialidades .flex{
@@ -157,4 +158,100 @@ section.espercialidades .flex{
 .espercialidades .especialidades-box h3{
     font-size: 28px;
     margin: 15px 0;
+}
+
+/* ESTILO SOBRE */
+section.sobre{
+    padding: 80px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .img-sobre img{
+    border-radius: 20px;
+}
+
+.sobre .txt-sobre{
+    color: #ffffff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #00ff08;
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.sobre .txt-sobre .btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #00ff08;
+    border: none;
+    font-size: 30px;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* ESTILO DO PORTFÓLIO */
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff73;
+    border-radius: 10px;
+}
+
+section.portfolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    margin: 10px;
+    background-color: #00ff08;
+    border-radius: 40px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    cursor: pointer;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
 }
