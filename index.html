@@ -27,13 +27,13 @@
             <nav class="menu-desktop">
                 <ul>
                     <li><a href="#">Início</a></li>
-                    <li><a href="#">Espercialidades</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#espercialidades">Espercialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Projetos</a></li>
                 </ul>
             </nav>
 
-            <div class="btn-contatos">
+            <div class="btn-contatos" >
                 <a href="https://matheuslufano.github.io/pagina-de-links/" target="_blank">
                     <button>Contatos</button>
                 </a>
@@ -43,7 +43,7 @@
         <main> <!-- Conteudo principal (obs.: uma tag main por pág.)-->
             <section class="topo-do-site">
                 <div class="interface">
-                    <div class="flex">
+                    <div class="flex"><!--CLASSE flex serve para linha um ao lado do outro-->
                         <div class="txt-top-site">
                             <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
                             <p> 
@@ -52,7 +52,7 @@
                                 para criar a presença online dos seus sonhos.
                             </p>
                             <div class="btn-contatos">
-                                <a href="https://matheuslufano.github.io/pagina-de-links/" target="_blank">
+                                <a href="#formulario">
                                     <button>Entre em contato</button>
                                 </a>
                             </div><!-- btn-contatos -->
@@ -64,32 +64,33 @@
                 </div><!-- interface -->
             </section><!-- topo-do-site -->
 
-            <section class="espercialidades">
+            <section class="espercialidades" id="espercialidades">
                 <div class="interface">
-                    <h2 class="titulo">MINHAS <span>ESPERCIALIDADES.</span></h2>
+                    <h2 class="titulo" id="">MINHAS <span>ESPERCIALIDADES.</span></h2>
                     <div class="flex">
                         <div class="especialidades-box">
                             <i class="bi bi-code-square"></i>
                             <h3>Website</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore nemo fugit veritatis est, tenetur voluptatum placeat quidem tempore temporibus nam repellendus iste quis ipsum officiis sunt iusto. Recusandae, adipisci minus?</p>
+                            <p>Um website é uma janela para o mundo digital. É onde sua identidade se manifesta, ideias são compartilhadas e conexões se formam. Em poucos cliques, essa janela revela quem você é e o que tem a oferecer. Se quiser, posso abrir uma janela pra você.</p>
                         </div><!--especialidades-box-->
 
                         <div class="especialidades-box">
                             <i class="bi bi-brush"></i>
                             <h3>Designer Gráfico</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore nemo fugit veritatis est, tenetur voluptatum placeat quidem tempore temporibus nam repellendus iste quis ipsum officiis sunt iusto. Recusandae, adipisci minus?</p>
+                            <p>Sempre gostei de criar artes gráficas, geralmente uso de alguns recursos do Photoshop para criar elementos para meus projetos, além disso sempre que é possível faço algumas artes para divulgar alguns eventos que participei e projetos que estou trabalhando.</p>
                         </div><!--especialidades-box-->
 
                         <div class="especialidades-box">
                             <i class="bi bi-filetype-py"></i>
                             <h3>Python3</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore nemo fugit veritatis est, tenetur voluptatum placeat quidem tempore temporibus nam repellendus iste quis ipsum officiis sunt iusto. Recusandae, adipisci minus?</p>
+                            <p>Desenvolvo em python já tem um bom tempo, é sem duvida a minha linguagem favorita, tenho um repositório no <a href="https://github.com/matheuslufano/Curso-de-Python/tree/main/python_teste/exercicios" target="_blank">GitHub</a> cheio de algum programas que uso pra praticar. </p>
                         </div><!--especialidades-box-->
                         
                     </div><!--flex-->
                 </div><!--interface-->
             </section><!--Espercialidades-->
-            <section class="sobre">
+
+            <section class="sobre" id="sobre">
                 <div class="interface">
                     <div class="flex">
                         <div class="img-sobre">
@@ -97,36 +98,73 @@
                         </div><!--img-sobre-->
                         <div class="txt-sobre">
                             <h2>MUITO PRAZER, <span>SOU MATHEUS S. MOTA</span></h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas eveniet id amet eaque vitae provident sed aliquam voluptatem dolores, fugiat ipsa enim, reiciendis voluptas placeat quisquam corporis voluptatibus assumenda!</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eligendi nobis odio, a minus corporis impedit culpa soluta doloremque unde, ipsum sapiente? Itaque aliquam iste impedit, assumenda temporibus consectetur explicabo.</p>
+                            <p>Tenho 23 anos, nasci em Paraíso do Tocantins-TO, onde vivo até hoje, desde criança sempre gostei de tecnologias, acompanho a evolução tecnológica desde o Nokia Tijolão (aquele celular indestrutível), bom acho que sempre me encontrei nessa área.</p>
+                            <p>Foi esse fascínio que me levou a descobrir a programação e todas as suas possibilidades. Atualmente, estou cursando Sistemas de Informação no IFTO, no campus de Paraíso, e estou super feliz com essa escolha. Amo o curso, especialmente porque posso conhecer pessoas incríveis que já estão nessa área desde os dinossauros.</p>
+
                             <div class="btn-social">
-                                <a href="#"><button><i class="bi bi-instagram"></i></button></a>
-                                <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
-                                <a href="#"><button><i class="bi bi-github"></i></button></a>
-                                <a href="#"><button><i class="bi bi-person-circle"></i></button></a>
-                            </div>
+                                <a href="https://www.instagram.com/mateu.py/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
+                                <a href="https://wa.link/t2fb2x" target="_blank"><button><i class="bi bi-whatsapp"></i></button></a>
+                                <a href="https://github.com/matheuslufano" target="_blank"><button><i class="bi bi-github"></i></button></a>
+                                <a href="https://matheuslufano.github.io/pagina-de-links/" target="_blank"><button><i class="bi bi-person-circle"></i></button></a>
+                            </div><!--btn-social-->
                         </div><!--txt-sobre-->
                     </div><!--flex-->
                 </div><!--interface-->
             </section><!--sobre-->
 
-            <section class="portfolio">
+            <section class="portfolio" id="portfolio">
                 <div class="interface">
                     <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
                     <div class="flex">
                         <div class="img-port" style="background-image: url('images/site-android.png');">
-                            <div class="overlay">Projeto 1</div>
+                            <div class="overlay"><a href="https://matheuslufano.github.io/projeto-android/" target="_blank">Projeto 1</a></div>
                         </div>
-                        <div class="img-port" style="background-image: url('images/site-android.png');">
-                            <div class="overlay">Projeto 2</div>
+                        <div class="img-port" style="background-image: url('images/proj-2.png');">
+                            <div class="overlay"><a href="https://github.com/matheuslufano" target="_blank">Projeto 2</a></div>
                         </div>
-                        <div class="img-port" style="background-image: url('images/site-android.png');">
-                            <div class="overlay">Projeto 3</div>
+                        <div class="img-port" style="background-image: url('images/proj-3.jpg');">
+                            <div class="overlay">Projeto 3 <br> em contrução</div>
                         </div>
                     </div><!--flex-->
                 </div><!--interface-->
             </section><!--portfolio-->
+
+            <section class="formulario" id="formulario">
+                <div class="interface">
+                    <h2 class="titulo">FALA <span>COMIGO.</span></h2>
+                    <form action="">
+                        <input type="text" name="" id="" placeholder="Seu nome completo:" required>
+                        <input type="text" name="" id="" placeholder="Seu e-mail:" required>
+                        <input type="text" name="" id="" placeholder="Seu celular:" required>
+                        <textarea name="" id="" placeholder="Sua mensagem:" required></textarea>
+                        <!--required(Campo obrigatorio),  placeholder (texto temporario)-->
+                        <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                    </form>
+                </div><!--interface-->
+            </section><!--formulario-->
         </main>
     </header>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="images/logo/Mateu.py/logo 350px.png" alt="minha logo" width="130px">
+                    </div><!--logo-footer-->
+                    
+                    <div class="btn-social">
+                        <a href="#"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
+                        <a href="#"><button><i class="bi bi-github"></i></button></a>
+                        <a href="#"><button><i class="bi bi-person-circle"></i></button></a>
+                    </div><!--btn-social-->
+                </div>
+            </div><!--line-footer-->
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-at-fill"></i><a href="mailto:matheuslufano93@gmail.com">matheuslufano93@gmail.com</a></p>
+            </div><!--line-footer-->
+        </div><!--interface-->
+    </footer>
 </body>
 </html>

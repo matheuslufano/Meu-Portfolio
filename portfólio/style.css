@@ -81,6 +81,19 @@ header nav ul li{
     padding: 0 40px;
 }
 
+/* ESTILO DO MENU-MOBILE */
+
+header .menu-mobaile{
+    background-color: #00ff08;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
 
 /* ESTILO DO TOPO DO SITE */
 section.topo-do-site{
@@ -349,6 +362,7 @@ footer .line-footer p a{
     .topo-do-site .flex{
         flex-direction: column-reverse;
     }
+
 
     /* CEBEÇALHO */
 
