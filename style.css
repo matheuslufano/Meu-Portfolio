@@ -242,6 +242,7 @@ section.portfolio .flex{
     transition: 5s;
     cursor: pointer;
     position: relative;
+    box-shadow: inset 0px 0px 13px 2px rgba(255, 255, 255, 0.473)
 }
 
 .img-port:hover{
