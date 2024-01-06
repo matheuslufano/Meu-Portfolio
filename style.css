@@ -441,8 +441,13 @@ footer .line-footer p a{
     }
 
     section.portfolio .flex{
-        gap: 50px;
+        gap: 60px;
     }
+    
+#portfolio{
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 
         /* ESTILO DO RODAPÉ */
