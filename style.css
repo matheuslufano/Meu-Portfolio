@@ -225,11 +225,15 @@ section.portfolio{
     padding: 80px 4%;
     box-shadow: 0 0 40px 10px #ffffff73;
     border-radius: 10px;
+    /* Portfolio */
+    margin: -50px 50px ;
+    transform:translatex(0px) translatey(0px);
 }
 
 section.portfolio .flex{
     justify-content: space-around;
-    margin-top: 60px;
+    margin-top: 50px;
+
 }
 
 .img-port{
