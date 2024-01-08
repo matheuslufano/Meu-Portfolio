@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo/Mateu.py/favicon_transparent_32x32.png" type="image/x-icon">
     <title>Portfólio MT.py</title>
+
+    <script src="menu.js" defer></script> <!--defer: carrega o js apois o html e css-->
+
 </head>
 <body>
     <header> <!-- conteudo de cabeçario -->
@@ -38,6 +41,29 @@
                     <button>Contatos</button>
                 </a>
             </div><!--btn-contatos-->
+            
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div><!-- btn-fechar -->
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#espercialidades">Espercialidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#portfolio">Projetos</a></li>
+                        <li><a href="#">Contatos</a></li>
+                    </ul>
+                </nav>
+
+            </div><!--menu-mobile-->
+            <div class="overlay-menu" id="overlay-menu">
+            </div> <!--overlay-menu -->
         </div><!--interface-->
 
         <main> <!-- Conteudo principal (obs.: uma tag main por pág.)-->
