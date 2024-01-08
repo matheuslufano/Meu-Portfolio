@@ -93,7 +93,7 @@ header nav.menu-desktop ul li{
     display: block;
 }
 .menu-mobile{
-    background-color: rgba(80, 80, 80, 0.678);
+    background-color: rgba(80, 80, 80, 0.932);
     height: 100vh;
     position: fixed;
     top: 0;
