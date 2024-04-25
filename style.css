@@ -386,6 +386,8 @@ footer.line-footer{
 footer .line-footer p i{
     color: #00ff08;
     font-size: 22px;
+    padding-left:0px;
+    padding-right:10px;
 }
 
 footer .line-footer p a{
