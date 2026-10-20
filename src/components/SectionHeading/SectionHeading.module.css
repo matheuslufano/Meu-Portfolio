@@ -1,0 +1,6 @@
+.heading { max-width: 760px; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.heading > span { display: inline-block; margin-bottom: 14px; color: var(--blue); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.heading h2 { margin-bottom: 18px; font-size: clamp(2.2rem, 5vw, 4.4rem); line-height: .98; letter-spacing: -.055em; }
+.heading p { max-width: 620px; margin-bottom: 0; color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.14rem); line-height: 1.72; }
+.heading[data-align='center'] { margin-inline: auto; text-align: center; }
+.heading[data-align='center'] p { margin-inline: auto; }

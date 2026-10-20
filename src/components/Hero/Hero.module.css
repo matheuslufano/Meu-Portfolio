@@ -1,0 +1,321 @@
+.hero {
+  position: relative;
+  width: var(--page-width);
+  margin-inline: auto;
+  min-height: 100svh;
+  padding-block: clamp(9rem, 14vw, 12rem) 5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(380px, 0.92fr);
+  align-items: center;
+  gap: clamp(3rem, 7vw, 7rem);
+}
+.content {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+.availability {
+  width: fit-content;
+  margin-bottom: 28px;
+  padding: 9px 14px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.availability span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.12);
+  animation: pulse 2s infinite;
+}
+.intro {
+  margin-bottom: 10px;
+  color: var(--blue);
+  font-weight: 700;
+}
+.hero h1 {
+  max-width: 760px;
+  margin-bottom: 26px;
+  font-size: 90px;
+  line-height: 0.91;
+  letter-spacing: -0.07em;
+}
+.hero h1 span {
+  display: block;
+  color: var(--blue);
+}
+.description {
+  max-width: 640px;
+  margin-bottom: 34px;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.7vw, 1.24rem);
+  line-height: 1.7;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.primaryButton,
+.ghostButton {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s ease, background 0.25s ease;
+}
+.primaryButton:hover,
+.ghostButton:hover { transform: translateY(-3px); }
+.primaryButton svg,
+.ghostButton svg { width: 18px; }
+.primaryButton { color: #fff; background: linear-gradient(135deg, var(--blue), #3b82f6); box-shadow: 0 14px 30px rgba(37,99,235,.24); }
+.ghostButton { border-color: var(--border); background: var(--surface); box-shadow: var(--shadow-sm); }
+.socials {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.socials > span {
+  margin-right: 5px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.socials a {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  transition: 0.25s ease;
+}
+.socials a:hover {
+  color: var(--blue);
+  transform: translateY(-3px);
+}
+.socials svg {
+  width: 17px;
+}
+.visual {
+  position: relative;
+  min-height: 600px;
+  display: grid;
+  place-items: center;
+}
+.portraitOrbit {
+  position: absolute;
+  width: 108%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(96, 165, 250, 0.24);
+  border-radius: 50%;
+  animation: orbit 20s linear infinite;
+}
+.portraitOrbit::before,
+.portraitOrbit::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: var(--blue-light);
+  box-shadow: 0 0 30px var(--blue-light);
+}
+.portraitOrbit::before {
+  width: 12px;
+  height: 12px;
+  top: 16%;
+  left: 10%;
+}
+.portraitOrbit::after {
+  width: 8px;
+  height: 8px;
+  right: 4%;
+  bottom: 30%;
+}
+.portraitCard {
+  width: min(100%, 480px);
+  aspect-ratio: 0.84;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: var(--shadow-lg);
+}
+.portraitLogo {
+  position: absolute;
+  z-index: 2;
+  bottom: 2%;
+  left: -2%;
+  width: clamp(96px, 24%, 138px);
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 14px 24px rgba(15, 23, 42, 0.32));
+}
+:is(.codeCard, .stackCard) {
+  position: absolute;
+  min-width: 205px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 18px;
+  animation: float 4s ease-in-out infinite alternate;
+}
+:is(.codeCard, .stackCard) svg {
+  width: 24px;
+  color: var(--blue);
+}
+:is(.codeCard, .stackCard) strong,
+:is(.codeCard, .stackCard) span {
+  display: block;
+}
+:is(.codeCard, .stackCard) strong {
+  font-size: 0.9rem;
+}
+:is(.codeCard, .stackCard) span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+.codeCard {
+  top: 16%;
+  left: -12%;
+}
+.stackCard {
+  right: -10%;
+  bottom: 16%;
+  animation-delay: -2s;
+}
+:is(.glowOne, .glowTwo) {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+.glowOne {
+  width: 330px;
+  height: 330px;
+  right: -8%;
+  top: 10%;
+  background: radial-gradient(
+    circle,
+    rgba(96, 165, 250, 0.24),
+    transparent 68%
+  );
+}
+.glowTwo {
+  width: 270px;
+  height: 270px;
+  left: -16%;
+  bottom: 4%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12), transparent 70%);
+}
+@keyframes float {
+  to {
+    transform: translateY(-14px) rotate(0.6deg);
+  }
+}
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse {
+  50% {
+    box-shadow: 0 0 0 9px rgba(34, 197, 94, 0);
+  }
+}
+@media (max-width: 1023px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: 10rem;
+  }
+  .visual {
+    min-height: 520px;
+    width: min(80%, 570px);
+    margin: auto;
+  }
+  .hero h1 {
+    max-width: 850px;
+  }
+  .codeCard {
+    left: -4%;
+  }
+  .stackCard {
+    right: -4%;
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    width: var(--page-width);
+    grid-template-columns: minmax(0, 100%);
+    min-height: auto;
+    padding-block: 8.5rem 4rem;
+    gap: 3rem;
+  }
+  .content {
+    width: 100%;
+    overflow: hidden;
+  }
+  .hero h1 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-size: clamp(2.5rem, 10.5vw, 4.6rem);
+  }
+  .description {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+  .visual {
+    min-height: 420px;
+    width: 100%;
+  }
+  .portraitCard {
+    width: 78%;
+    border-radius: 24px;
+  }
+  .portraitLogo {
+    bottom: 4%;
+    left: 2%;
+    width: clamp(82px, 25%, 112px);
+  }
+  :is(.codeCard, .stackCard) {
+    min-width: 170px;
+    padding: 12px;
+  }
+  .codeCard {
+    top: 8%;
+    left: 0;
+  }
+  .stackCard {
+    right: 0;
+    bottom: 8%;
+  }
+  .primaryButton,
+  .ghostButton {
+    flex: 1;
+    min-width: 170px;
+  }
+}
+@media (max-width: 460px) {
+  .actions {
+    display: grid;
+  }
+  .primaryButton,
+  .ghostButton {
+    width: 100%;
+  }
+  .socials {
+    flex-wrap: wrap;
+  }
+}

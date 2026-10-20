@@ -1,0 +1,15 @@
+.skipLink {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: var(--ice);
+  background: var(--graphite);
+  transform: translateY(-160%);
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}

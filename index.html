@@ -1,251 +1,61 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- FIM GOOGLE FONTS -->
-    <!-- BOOTSTRAP ICONS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- FIM BOOTSTRAP ICONS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/logo/Mateu.py/favicon_transparent_32x32.png" type="image/x-icon">
-    <title>Portfólio MT.py</title>
-
-    <script src="menu.js" defer></script> <!--defer: carrega o js apois o html e css-->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16480744226">
-    </script>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8fafc" />
+    <meta
+      name="description"
+      content="Portfólio de Matheus S. Mota, desenvolvedor Full Stack e estudante de Sistemas de Informação."
+    />
+    <meta
+      property="og:title"
+      content="Matheus S. Mota | Desenvolvedor Full Stack"
+    />
+    <meta
+      property="og:description"
+      content="Projetos, tecnologias e trajetória de Matheus S. Mota."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="/images/logo/Mateu.py/favicon_transparent_32x32.png"
+      type="image/png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Matheus S. Mota | Desenvolvedor Full Stack</title>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-    
-        gtag('config', 'AW-16480744226');
+      (function () {
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        document.documentElement.dataset.theme =
+          savedTheme === "dark" ? "dark" : "light";
+      })();
     </script>
-    <!-- Event snippet for Page view conversion page -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-16480744226"
+    ></script>
     <script>
-        gtag('event', 'conversion', {
-            'send_to': 'AW-16480744226/sj92CL-clpgZEKLm0LI9',
-            'value': 1.0,
-            'currency': 'BRL'
-        });
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-16480744226");
+      gtag("event", "conversion", {
+        send_to: "AW-16480744226/sj92CL-clpgZEKLm0LI9",
+        value: 1.0,
+        currency: "BRL",
+      });
     </script>
-
-</head>
-<body>
-    <header> <!-- conteudo de cabeçario -->
-        <div class="interface"> <!--Serve para limitar o site (marges)-->
-            <div class="logo">
-                <a href="#">
-                    <img src="images/logo/Mateu.py/logo 350px.png" alt="Logo do meu site" width="150px">
-                </a>
-            </div><!--logo type-->
-
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#espercialidades">Especialidades</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#portfolio">Projetos</a></li>
-                </ul>
-            </nav>
-
-            <div class="btn-contatos" >
-                <a href="https://matheuslufano.github.io/pagina-de-links/" target="_blank">
-                    <button>Contatos</button>
-                </a>
-            </div><!--btn-contatos-->
-            
-            <div class="btn-abrir-menu" id="btn-menu">
-                <i class="bi bi-list"></i>
-            </div>
-
-            <div class="menu-mobile" id="menu-mobile">
-                <div class="btn-fechar">
-                    <i class="bi bi-x-lg"></i>
-                </div><!-- btn-fechar -->
-
-                <nav>
-                    <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#espercialidades">Especialidades</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#portfolio">Projetos</a></li>
-                        <li><a href="https://matheuslufano.github.io/pagina-de-links/" target="_blank">Contatos</a></li>
-                    </ul>
-                </nav>
-
-            </div><!--menu-mobile-->
-            <div class="overlay-menu" id="overlay-menu">
-            </div> <!--overlay-menu -->
-        </div><!--interface-->
-
-        <main> <!-- Conteudo principal (obs.: uma tag main por pág.)-->
-            <section class="topo-do-site">
-                <div class="interface">
-                    <div class="flex"><!--CLASSE flex serve para linha um ao lado do outro-->
-                        <div class="txt-top-site">
-                            <h1><span>Dev Full Stack</span></h1>
-                            <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
-                            <p align="left">
-                                <a href="https://github.com/matheuslufano/Curso-de-Python" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" width="36" height="36" alt="Python" style="margin: 5px;"/></a>
-
-                                <a href="https://github.com/matheuslufano/Curso-JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" style="margin: 5px;"/></a>
-                                
-                                <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode.svg" width="36" height="36" alt="VS Code" style="margin: 5px;"/></a>
-
-                                <a href="https://github.com/matheuslufano/Curso-HTML5-CSS3" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" style="margin: 5px;"/></a>
-                                
-                                <a href="https://github.com/matheuslufano/Curso-HTML5-CSS3" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" style="margin: 5px;"/></a>
-                                
-                                <a href="https://github.com/matheuslufano/Curso_React" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" />
-                                </a>
-                                
-                                <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" width="36" height="36" alt="NodeJS" style="margin: 5px;"/></a>
-                                
-                                <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mysql-colored.svg" width="36" height="36" alt="MySQL" style="margin: 5px;"/></a>
-
-                                <a href="https://www.adobe.com/uk/products/photoshop.html" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/photoshop-colored.svg" width="36" height="36" alt="Photoshop" style="margin: 5px;"/></a>
-                                
-                                <a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" width="36" height="36" alt="Figma" style="margin: 5px;"/></a>
-                                </p>
-
-
-
-                            <div class="btn-contatos">
-                                <a href="#formulario">
-                                    <button>Entre em contato</button>
-                                </a>
-                            </div><!-- btn-contatos -->
-                        </div><!-- txt-top-site -->
-                        <div class="img-top-site">
-                            <img src="images/foto de perfil  flutuante.jpg" alt="Matheus S. Mota" width="350px">
-                        </div><!-- img-top-site -->
-                    </div><!-- flex -->
-                </div><!-- interface -->
-            </section><!-- topo-do-site -->
-
-            <section class="espercialidades" id="espercialidades">
-                <div class="interface">
-                    <h2 class="titulo" id="">MINHAS <span>ESPERCIALIDADES.</span></h2>
-                    <div class="flex">
-                        <div class="especialidades-box">
-                            <i class="bi bi-code-square"></i>
-                            <h3>Website</h3>
-                            <p>Um website é uma janela para o mundo digital. É onde sua identidade se manifesta, ideias são compartilhadas e conexões se formam. Em poucos cliques, essa janela revela quem você é e o que tem a oferecer. Se quiser, posso abrir uma janela pra você.</p>
-                        </div><!--especialidades-box-->
-
-                        <div class="especialidades-box">
-                            <i class="bi bi-brush"></i>
-                            <h3>Designer Gráfico</h3>
-                            <p>Sempre gostei de criar artes gráficas, geralmente uso de alguns recursos do Photoshop para criar elementos para meus projetos, além disso sempre que é possível faço algumas artes para divulgar alguns eventos que participei e projetos que estou trabalhando.</p>
-                        </div><!--especialidades-box-->
-
-                        <div class="especialidades-box">
-                            <i class="bi bi-filetype-py"></i>
-                            <h3>Python3</h3>
-                            <p>Desenvolvo em python já tem um bom tempo, é sem duvida a minha linguagem favorita, tenho um repositório no <a href="https://github.com/matheuslufano/Curso-de-Python/tree/main/python_teste/exercicios" target="_blank">GitHub</a> cheio de algum programas que uso pra praticar. </p>
-                        </div><!--especialidades-box-->
-                        
-                    </div><!--flex-->
-                </div><!--interface-->
-            </section><!--Espercialidades-->
-
-            <section class="sobre" id="sobre">
-                <div class="interface">
-                    <div class="flex">
-                        <div class="img-sobre">
-                            <img src="images/foto sobre.png" alt="Foto de bio" width="350px">
-                        </div><!--img-sobre-->
-                        <div class="txt-sobre">
-                            <h2>MUITO PRAZER, <span>SOU MATHEUS S. MOTA</span></h2>
-                            <p>Tenho 23 anos, nasci em Paraíso do Tocantins-TO, onde vivo até hoje, desde criança sempre gostei de tecnologias, acompanho a evolução tecnológica desde o Nokia Tijolão (aquele celular indestrutível), bom acho que sempre me encontrei nessa área.</p>
-                            <p>Foi esse fascínio que me levou a descobrir a programação e todas as suas possibilidades. Atualmente, estou cursando Sistemas de Informação no IFTO, no campus de Paraíso, e estou super feliz com essa escolha. Amo o curso, especialmente porque posso conhecer pessoas incríveis que já estão nessa área desde os dinossauros.</p>
-
-                            <div class="btn-social">
-                                <a href="https://www.instagram.com/mateu.py/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
-                                <a href="https://wa.link/t2fb2x" target="_blank"><button><i class="bi bi-whatsapp"></i></button></a>
-                                <a href="https://github.com/matheuslufano" target="_blank"><button><i class="bi bi-github"></i></button></a>
-                                <a href="https://matheuslufano.github.io/pagina-de-links/" target="_blank"><button><i class="bi bi-person-circle"></i></button></a>
-                            </div><!--btn-social-->
-                        </div><!--txt-sobre-->
-                    </div><!--flex-->
-                </div><!--interface-->
-            </section><!--sobre-->
-
-            <section class="portfolio" id="portfolio">
-                <!-- linha 1 -->
-                <div class="interface">
-                    <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
-                    <div class="flex">
-                        <div class="img-port" style="background-image: url('images/site-android.png');">
-                            <div class="overlay"><a href="https://matheuslufano.github.io/projeto-android/" target="_blank">Projeto Android</a></div>
-                        </div>
-                        <div class="img-port" style="background-image: url('images/proj-cordel.png');">
-                            <div class="overlay"><a href="https://matheuslufano.github.io/Projeto-Cordel/cordel-moderno" target="_blank">Projeto Cordel</a></div>
-                        </div>
-                        <div class="img-port" style="background-image: url('images/proj-2.png');">
-                            <div class="overlay"><a href="https://github.com/matheuslufano" target="_blank">GitHub</div></a>
-                        </div>
-                    </div><!--flex-->
-                </div><!--interface-->
-
-                <!-- linha 2 -->
-                <div class="interface">
-                    <div class="flex">
-                        <div class="img-port" style="background-image: url('images/projeto-calculadora.png');">
-                            <div class="overlay"><a href="https://matheuslufano.github.io/projeto-calculadora/" target="_blank">Projeto Calculadora JS</a></div>
-                        </div>
-                        <div class="img-port" style="background-image: url('images/d3.png');">
-                            <div class="overlay"><a href="https://matheuslufano.github.io/Projeto-Cordel/cordel-moderno" target="_blank">{Projeto em <br> desenvolvimento}</a></div>
-                        </div>
-                        <div class="img-port" style="background-image: url('images/d2.jpg');">
-                            <div class="overlay"><a href="https://github.com/matheuslufano" target="_blank">{Projeto em <br> desenvolvimento}</div></a>
-                        </div>
-                    </div><!--flex-->
-                </div><!--interface-->
-            </section>portfolio
-
-            <section class="formulario" id="formulario">
-                <div class="interface">
-                    <h2 class="titulo">FALA <span>COMIGO.</span></h2>
-                    <form action="">
-                        <input type="text" name="" id="" placeholder="Seu nome completo:" required>
-                        <input type="text" name="" id="" placeholder="Seu e-mail:" required>
-                        <input type="text" name="" id="" placeholder="Seu celular:" required>
-                        <textarea name="" id="" placeholder="Sua mensagem:" required></textarea>
-                        <!--required(Campo obrigatorio),  placeholder (texto temporario)-->
-                        <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
-                    </form>
-                </div><!--interface-->
-            </section><!--formulario-->
-        </main>
-    </header>
-
-    <footer>
-        <div class="interface">
-            <div class="line-footer">
-                <div class="flex">
-                    <div class="logo-footer">
-                        <img src="images/logo/Mateu.py/logo 350px.png" alt="minha logo" width="130px">
-                    </div><!--logo-footer-->
-                    
-                    <div class="btn-social">
-                        <a href="#"><button><i class="bi bi-instagram"></i></button></a>
-                        <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
-                        <a href="#"><button><i class="bi bi-github"></i></button></a>
-                        <a href="#"><button><i class="bi bi-person-circle"></i></button></a>
-                    </div><!--btn-social-->
-                </div>
-            </div><!--line-footer-->
-            <div class="line-footer borda">
-                <p><i class="bi bi-envelope-at-fill"></i><a href="mailto:matheuslufano93@gmail.com">matheuslufano93@gmail.com</a></p>
-            </div><!--line-footer-->
-        </div><!--interface-->
-    </footer>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

@@ -1,0 +1,48 @@
+.frame {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 38px minmax(0, 1fr);
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.titlebar {
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--muted);
+  background: var(--surface-strong);
+  font-size: 0.68rem;
+}
+
+.titlebar > span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lights {
+  display: flex;
+  flex-shrink: 0;
+  gap: 5px;
+}
+
+.lights i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ff6058;
+}
+
+.lights i:nth-child(2) { background: #ffbd2e; }
+.lights i:nth-child(3) { background: #28c840; }
+
+.image {
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--file-frame-position);
+}

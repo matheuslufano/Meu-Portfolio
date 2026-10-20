@@ -1,0 +1,132 @@
+.card {
+  min-height: 186px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 22px;
+  overflow: hidden;
+  border-radius: 26px;
+  background: linear-gradient(145deg, var(--surface), transparent 78%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 1px 0 0 rgba(255, 255, 255, 0.42),
+    0 12px 32px rgba(38, 70, 110, 0.07);
+}
+
+/* Reflexo atravessa o vidro sem modificar as cores originais das marcas. */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -70% -110%;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.34) 50%,
+    transparent 58%
+  );
+  transform: translateX(-45%);
+  transition: transform 0.8s var(--ease);
+}
+
+.card:hover::after,
+.card:focus-visible::after {
+  transform: translateX(45%);
+}
+
+.icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      ellipse at 75% 100%,
+      color-mix(in srgb, var(--technology-accent) 18%, transparent),
+      transparent 75%
+    ),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.12));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.24),
+    0 8px 20px rgba(24, 49, 79, 0.09);
+  backdrop-filter: blur(12px) saturate(135%);
+  -webkit-backdrop-filter: blur(12px) saturate(135%);
+  transition:
+    transform 0.35s var(--ease),
+    box-shadow 0.35s ease;
+}
+
+.icon img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 3px rgba(15, 23, 42, 0.12));
+}
+
+.card:hover .icon,
+.card:focus-visible .icon {
+  transform: translateY(-3px) rotate(-4deg);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 12px 26px color-mix(in srgb, var(--technology-accent) 18%, transparent);
+}
+
+.card strong,
+.card small {
+  display: block;
+}
+.card strong {
+  font-size: 0.98rem;
+}
+.card small {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+:root[data-theme="dark"] .icon {
+  border-color: rgba(255, 255, 255, 0.24);
+  background:
+    radial-gradient(
+      ellipse at 75% 100%,
+      color-mix(in srgb, var(--technology-accent) 22%, transparent),
+      transparent 80%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.22),
+      rgba(255, 255, 255, 0.06)
+    );
+}
+
+@supports not (
+  (backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))
+) {
+  .card {
+    background: var(--surface-strong);
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    min-height: 166px;
+    padding: 18px;
+    border-radius: 22px;
+  }
+  .icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 18px;
+  }
+  .icon img {
+    width: 36px;
+    height: 36px;
+  }
+}
