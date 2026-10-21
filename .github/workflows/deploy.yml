@@ -39,6 +39,9 @@ jobs:
       - name: Compilar o projeto
         run: npm run build
 
+      - name: Copiar imagens estáticas
+        run: cp -R images dist/images
+
       - name: Configurar o GitHub Pages
         uses: actions/configure-pages@v5
 
