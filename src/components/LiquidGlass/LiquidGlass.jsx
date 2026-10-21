@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './LiquidGlass.module.css';
+import styles from './LiquidGlass.module.css';
 
 /** Superfície de vidro reutilizável com intensidade configurável. */
 export default function LiquidGlass({
@@ -15,7 +15,7 @@ export default function LiquidGlass({
 
   return (
     <Element
-      className={className || undefined}
+      className={[styles.surface, className].filter(Boolean).join(' ')}
       data-liquid-glass
       data-interactive={interactive || undefined}
       style={{

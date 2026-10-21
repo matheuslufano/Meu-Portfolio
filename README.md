@@ -62,7 +62,9 @@ de classe no JSX.
 
 - Navegação flutuante e menu mobile.
 - Temas claro e escuro com preferência persistida no navegador.
-- Componente reutilizável `LiquidGlass` com intensidade configurável.
+- Componente reutilizável `LiquidGlass` com intensidade configurável. Sua classe
+  local `surface` é importada explicitamente do CSS Module para manter os
+  estilos vinculados ao componente também no build de produção.
 - Tecnologias com logos coloridas em SVG, armazenadas em `images/technologies` e importadas pelo Vite, sobre cartões de vidro com reflexos e iluminação. Assets de marca do acervo [Devicon](https://github.com/devicons/devicon), sujeitos às diretrizes das respectivas marcas.
 - Pasta interativa de projetos: clique para revelar os arquivos em janelas com capas e links. Os filtros por categoria continuam disponíveis; Escape fecha a pasta e retorna o foco ao botão. No celular, os arquivos são organizados em uma coluna.
 - As pastas Meus projetos (azul), Projetos do IFTO (verde), Eventos de tecnologia (roxo) e Empresas onde trabalhei (laranja) são configuradas em `src/data/projectFolders.js`. A coleção do IFTO contém o protótipo IFTO Connect; Eventos de tecnologia e Empresas onde trabalhei permanecem disponíveis para futuros conteúdos. Para cadastrar projetos, use os campos `name`, `category`, `description`, `image`, `technologies` e `live`, conforme os exemplos existentes.
