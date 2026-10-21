@@ -26,6 +26,17 @@ npm run preview
 
 O Vite utiliza `/Meu-Portfolio/` como caminho base para manter compatibilidade com a publicação atual no GitHub Pages.
 
+### Publicação na Vercel
+
+O arquivo `vercel.json` configura o build da Vercel com caminho base `/` e copia
+os arquivos estáticos de `images/` para `dist/images/`. O workflow do GitHub
+Pages continua utilizando `/Meu-Portfolio/`.
+
+Ao importar o repositório na Vercel, selecione como Root Directory a pasta que
+contém `package.json`, `vite.config.js` e `vercel.json`. Utilize o preset Vite
+e mantenha os comandos definidos pelo arquivo de configuração, sem overrides
+no painel. Cada push para a branch de produção gera uma nova publicação.
+
 ## Estrutura principal
 
 ```text
