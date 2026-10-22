@@ -1,0 +1,30 @@
+.page {
+  padding-top: clamp(140px, 15vw, 180px);
+}
+.heading {
+  width: var(--page-width);
+  margin: 0 auto 36px;
+}
+.heading > span {
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.heading h1 {
+  max-width: 900px;
+  margin-block: 16px;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+}
+.heading p {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.page > section {
+  padding-top: 20px;
+}

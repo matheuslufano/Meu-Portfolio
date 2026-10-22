@@ -23,11 +23,10 @@ export default function Hero() {
           Disponível para novos projetos
         </LiquidGlass>
         <p className={styles.intro}>Olá, me chamo</p>
-        <h1>
-          Matheus Mota
-        </h1>
+        <h1>Matheus Mota</h1>
         <p className={styles.description}>
-          Sou desenvolvedor Full Stack e formado em Sistemas de Informação e amo a area que trabalho
+          Sou desenvolvedor Full Stack e formado em Sistemas de Informação e amo
+          a area que trabalho
         </p>
         <div className={styles.actions}>
           <a className={styles.primaryButton} href="#projetos">

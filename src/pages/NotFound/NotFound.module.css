@@ -1,0 +1,11 @@
+.returnLink {
+  width: var(--page-width);
+  margin: 0 auto 64px;
+}
+.returnLink a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--blue);
+  font-weight: 600;
+}

@@ -1,3 +1,27 @@
+.shell {
+  min-height: 100svh;
+}
+/* Reflexos e órbitas decorativas ficam limitados à largura da página. */
+.main {
+  min-height: 65svh;
+  overflow-x: clip;
+}
+.main:focus {
+  outline: none;
+}
+.route {
+  animation: enter 0.3s var(--ease) both;
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 .skipLink {
   position: fixed;
   top: 10px;
@@ -9,7 +33,17 @@
   background: var(--graphite);
   transform: translateY(-160%);
 }
-
 .skipLink:focus {
   transform: translateY(0);
+}
+/* Espaço reservado mesmo no final do rodapé, incluindo a área segura do iPhone. */
+@media (max-width: 999px) {
+  .shell {
+    padding-bottom: calc(104px + env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .route {
+    animation: none;
+  }
 }

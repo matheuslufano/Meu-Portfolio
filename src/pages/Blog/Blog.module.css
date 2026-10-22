@@ -1,0 +1,28 @@
+.empty {
+  width: var(--page-width);
+  margin: 0 auto var(--section-space);
+  padding: clamp(28px, 6vw, 64px);
+  border-radius: var(--radius-lg);
+}
+.empty > svg {
+  color: var(--blue);
+  margin-bottom: 24px;
+}
+.empty h2 {
+  max-width: 650px;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  letter-spacing: -0.035em;
+}
+.empty p {
+  max-width: 600px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.empty a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--blue);
+  font-weight: 650;
+}

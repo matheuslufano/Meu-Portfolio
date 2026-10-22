@@ -1,42 +1,79 @@
-import { useEffect, useState } from 'react';
-import { Menu, Moon, Sun, X } from 'lucide-react';
-import { navigation } from '../../data/portfolio';
-import LiquidGlass from '../LiquidGlass/LiquidGlass';
-import styles from './Header.module.css';
+import { useEffect, useState } from "react";
+import { Moon, Sun } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
+import { navigation } from "../../data/navigation";
+import LiquidGlass from "../LiquidGlass/LiquidGlass";
+import styles from "./Header.module.css";
 
-/** Navegação flutuante com menu mobile, tema persistente e estado de rolagem. */
+/** Cabeçalho compartilhado; NavLink identifica a página atual pela URL. */
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'light');
+  const [theme, setTheme] = useState(
+    () => document.documentElement.dataset.theme || "light",
+  );
 
   useEffect(() => {
     const updateHeader = () => setScrolled(window.scrollY > 24);
     updateHeader();
-    window.addEventListener('scroll', updateHeader, { passive: true });
-    return () => window.removeEventListener('scroll', updateHeader);
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    return () => window.removeEventListener("scroll", updateHeader);
   }, []);
 
+  /** Aplica o tema imediatamente; armazenamento bloqueado não impede a troca. */
   function toggleTheme() {
-    const nextTheme = theme === 'light' ? 'dark' : 'light';
+    const nextTheme = theme === "light" ? "dark" : "light";
     document.documentElement.dataset.theme = nextTheme;
-    localStorage.setItem('portfolio-theme', nextTheme);
     setTheme(nextTheme);
+    try {
+      localStorage.setItem("portfolio-theme", nextTheme);
+    } catch {
+      /* Tema continua válido nesta visita. */
+    }
   }
 
-  return <header className={styles.header} data-scrolled={scrolled || undefined}>
-    <LiquidGlass className={styles.navbar} opacity={0.74}>
-      <a className={styles.brand} href="#inicio" aria-label="Ir para o início">
-        <img src={`${import.meta.env.BASE_URL}images/logo/lontra.png`} alt="" /><span>Matheus<span>.dev</span></span>
-      </a>
-      <nav className={styles.navLinks} data-open={menuOpen || undefined} aria-label="Navegação principal">
-        {navigation.map(([label, id]) => <a key={id} href={`#${id}`} onClick={() => setMenuOpen(false)}>{label}</a>)}
-      </nav>
-      <div className={styles.actions}>
-        <button className={styles.iconButton} type="button" onClick={toggleTheme} aria-label={`Ativar tema ${theme === 'light' ? 'escuro' : 'claro'}`} aria-pressed={theme === 'dark'}>{theme === 'light' ? <Moon /> : <Sun />}</button>
-        <a className={styles.contactLink} href="#contato">Vamos conversar</a>
-        <button className={styles.menuButton} type="button" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'} aria-expanded={menuOpen}>{menuOpen ? <X /> : <Menu />}</button>
-      </div>
-    </LiquidGlass>
-  </header>;
+  return (
+    <header className={styles.header} data-scrolled={scrolled || undefined}>
+      <LiquidGlass className={styles.navbar} opacity={0.9}>
+        <Link className={styles.brand} to="/" aria-label="Matheus.dev — Início">
+          <img
+            src={`${import.meta.env.BASE_URL}images/logo/lontra.png`}
+            alt=""
+          />
+          <span>
+            Matheus<span>.dev</span>
+          </span>
+        </Link>
+        <nav className={styles.navLinks} aria-label="Navegação principal">
+          {navigation.map(({ label, path }) => (
+            <NavLink
+              className={styles.navLink}
+              key={path}
+              to={path}
+              end={path === "/"}
+            >
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+        <div className={styles.actions}>
+          <button
+            className={styles.iconButton}
+            type="button"
+            onClick={toggleTheme}
+            aria-label={`Ativar tema ${theme === "light" ? "escuro" : "claro"}`}
+            aria-pressed={theme === "dark"}
+          >
+            {theme === "light" ? (
+              <Moon aria-hidden="true" />
+            ) : (
+              <Sun aria-hidden="true" />
+            )}
+          </button>
+          <Link className={styles.contactLink} to="/contato">
+            Vamos conversar
+          </Link>
+        </div>
+      </LiquidGlass>
+    </header>
+  );
 }

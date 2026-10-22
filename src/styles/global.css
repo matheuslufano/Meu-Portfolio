@@ -120,3 +120,8 @@ p {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Mantém campos e destinos de rolagem visíveis acima da navegação mobile. */
+@media (max-width: 999px) {
+  html { scroll-padding-bottom: calc(104px + env(safe-area-inset-bottom, 0px)); }
+}

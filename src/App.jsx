@@ -1,36 +1,41 @@
-import { useEffect } from "react";
-import About from "./components/About/About";
-import Contact from "./components/Contact/Contact";
-import Experience from "./components/Experience/Experience";
-import Footer from "./components/Footer/Footer";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import Projects from "./components/Projects/Projects";
-import Technologies from "./components/Technologies/Technologies";
+import Footer from "./components/Footer/Footer";
+import MobileNavigation from "./components/MobileNavigation/MobileNavigation";
+import useRouteNavigation from "./hooks/useRouteNavigation";
+import Home from "./pages/Home/Home";
+import Blog from "./pages/Blog/Blog";
+import ProjectsPage from "./pages/Projects/ProjectsPage";
+import ExperiencePage from "./pages/Experience/ExperiencePage";
+import ContactPage from "./pages/Contact/ContactPage";
+import NotFound from "./pages/NotFound/NotFound";
 import styles from "./App.module.css";
 
-/** Compõe a página principal a partir de seções independentes. */
+/** Layout persistente das páginas, com navegação e rodapé compartilhados. */
 export default function App() {
-  useEffect(() => {
-    const targetId = window.location.hash.slice(1);
-    if (targetId) document.getElementById(targetId)?.scrollIntoView();
-  }, []);
+  const { pathname } = useLocation();
+  useRouteNavigation();
 
   return (
-    <>
+    <div className={styles.shell}>
       <a className={styles.skipLink} href="#conteudo">
         Pular para o conteúdo
       </a>
       <Header />
-      <main id="conteudo">
-        <Hero />
-        <About />
-        <Technologies />
-        <Projects />
-        <Experience />
-        <Contact />
+      <main className={styles.main} id="conteudo" tabIndex={-1}>
+        <div className={styles.route} key={pathname}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/projetos" element={<ProjectsPage />} />
+            <Route path="/experiencia" element={<ExperiencePage />} />
+            <Route path="/contato" element={<ContactPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </main>
       <Footer />
-    </>
+      <MobileNavigation />
+    </div>
   );
 }

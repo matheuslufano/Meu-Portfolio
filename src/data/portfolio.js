@@ -9,17 +9,6 @@ import vscodeLogo from "../../images/technologies/vscode.svg";
 import photoshopLogo from "../../images/technologies/photoshop.svg";
 import figmaLogo from "../../images/technologies/figma.svg";
 
-const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
-
-export const navigation = [
-  ["Início", "inicio"],
-  ["Sobre", "sobre"],
-  ["Tecnologias", "tecnologias"],
-  ["Projetos", "projetos"],
-  ["Experiência", "experiencia"],
-  ["Contato", "contato"],
-];
-
 export const socials = {
   github: "https://github.com/matheuslufano",
   instagram: "https://www.instagram.com/mateu.py/",
@@ -98,57 +87,6 @@ export const technologies = [
     logo: figmaLogo,
     accent: "#a259ff",
     href: "https://www.figma.com/",
-  },
-];
-
-export const projects = [
-  {
-    name: "Curiosidades de Android",
-    category: "Front-end",
-    description:
-      "Site editorial sobre a história do mascote Android, com conteúdo responsivo e identidade própria.",
-    image: asset("images/site-android.png"),
-    technologies: ["HTML5", "CSS3"],
-    live: "https://matheuslufano.github.io/projeto-android/",
-    featured: true,
-  },
-  {
-    name: "Cordel Moderno",
-    category: "Front-end",
-    description:
-      "Experiência de leitura inspirada em cordel, com imagens, tipografia expressiva e efeito parallax.",
-    image: asset("images/proj-cordel.png"),
-    technologies: ["HTML5", "CSS3"],
-    live: "https://matheuslufano.github.io/Projeto-Cordel/cordel-moderno",
-  },
-  {
-    name: "Calculadora JavaScript",
-    category: "JavaScript",
-    description:
-      "Calculadora visual desenvolvida para praticar lógica, eventos e manipulação da interface.",
-    image: asset("images/projeto-calculadora.png"),
-    technologies: ["JavaScript", "CSS3"],
-    live: "https://matheuslufano.github.io/projeto-calculadora/",
-  },
-  {
-    name: "Página de links",
-    category: "Front-end",
-    description:
-      "Central pessoal de links e canais profissionais, criada para reunir contatos em uma única experiência.",
-    image: asset(
-      "images/screencapture-matheuslufano-github-io-pagina-de-links-2023-11-26-10_43_54.png",
-    ),
-    technologies: ["HTML5", "CSS3"],
-    live: "https://matheuslufano.github.io/pagina-de-links/",
-  },
-  {
-    name: "Laboratório visual",
-    category: "Em desenvolvimento",
-    description:
-      "Espaço reservado aos experimentos e projetos que estão em evolução.",
-    image: asset("images/fundo/d3.png"),
-    technologies: ["Design", "Front-end"],
-    live: "https://github.com/matheuslufano",
   },
 ];
 
